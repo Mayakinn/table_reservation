@@ -118,3 +118,4 @@
 /home/maja/Documents/GitHub/table_reservation/backend/obj/Debug/net9.0/backend.pdb
 /home/maja/Documents/GitHub/table_reservation/backend/obj/Debug/net9.0/backend.genruntimeconfig.cache
 /home/maja/Documents/GitHub/table_reservation/backend/obj/Debug/net9.0/ref/backend.dll
+/home/maja/Documents/GitHub/table_reservation/backend/obj/Debug/net9.0/backend.sourcelink.json

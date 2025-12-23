@@ -35,7 +35,7 @@ namespace backend.Services
                 r.EndDate >= from);
 
             if (overlaps)
-                throw new Exception("Desk already reserved for this period");
+                throw new Exception("Desk is already reserved for this period");
 
             var reservation = new Reservation
             {

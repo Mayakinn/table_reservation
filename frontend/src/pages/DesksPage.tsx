@@ -14,7 +14,6 @@ import CancelReservationForm from "../forms/CancelReservationForm";
 import CancelSingleDayForm from "../forms/CancelSingleDayForm";
 
 type ModalMode = "create" | "cancel-all" | "cancel-day" | null;
-const today = new Date().toISOString().split("T")[0];
 
 export default function SharedDesksPage() {
   const today = new Date().toISOString().split("T")[0];

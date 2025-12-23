@@ -3,18 +3,13 @@ using backend.Models;
 
 namespace backend.Data
 {
-    public class AppDbContext : DbContext
+    public class AppDbContext(DbContextOptions<AppDbContext> options) : DbContext(options)
     {
         public DbSet<User> Users => Set<User>();
         public DbSet<Desk> Desks => Set<Desk>();
         public DbSet<Reservation> Reservations => Set<Reservation>();
 
         public static Guid CurrentUserId { get; private set; }
-
-        public AppDbContext(DbContextOptions<AppDbContext> options)
-            : base(options)
-        {
-        }
 
         public static void SeedData(AppDbContext context)
         {
@@ -47,23 +42,21 @@ namespace backend.Data
                 Id = Guid.NewGuid(),
                 DeskNumber = 7,
                 Status = DeskStatus.Maintenance,
-                MaintenanceMessage = "Desk is under maintenance"
+                MaintenanceMessage = "Desk broken :("
             };
 
             desks.Add(maintenanceDesk);
 
             var reservations = new List<Reservation>
             {
-                new Reservation
-                {
+                new() {
                     Id = Guid.NewGuid(),
                     UserId = currentUser.Id,
                     DeskId = desks[0].Id,
                     StartDate = DateTime.Today.AddDays(-2),
                     EndDate = DateTime.Today.AddDays(1)
                 },
-                new Reservation
-                {
+                new() {
                     Id = Guid.NewGuid(),
                     UserId = otherUser.Id,
                     DeskId = desks[1].Id,

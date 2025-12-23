@@ -29,7 +29,7 @@ export default function ReservationRow({
       <div>
         <div className="font-medium">Desk #{reservation.deskNumber}</div>
         <div className="text-sm text-gray-600">
-          {reservation.startDate.split("T")[0]} →{" "}
+          {reservation.startDate.split("T")[0]} -{">"}{" "}
           {reservation.endDate.split("T")[0]}
         </div>
       </div>

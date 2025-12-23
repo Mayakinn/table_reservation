@@ -13,12 +13,12 @@ export default function DeskCard({
 }: Props) {
   return (
     <div
-      className={`group border rounded p-4 ${
+      className={`group border rounded-3xl p-4 ${
         desk.status === "Open"
-          ? "bg-green-100 border-green-400"
+          ? "bg-green-100 border-green-700"
           : desk.status === "Reserved"
-          ? "bg-red-100 border-red-400"
-          : "bg-gray-200 border-gray-400"
+          ? "bg-red-100 border-red-700"
+          : "bg-gray-200 border-gray-700"
       }`}
     >
       <div className="font-semibold">Desk #{desk.deskNumber}</div>
@@ -39,7 +39,7 @@ export default function DeskCard({
 
       {desk.status === "Open" && (
         <button
-          className="mt-3 w-full bg-green-600 text-white py-1 rounded"
+          className="mt-3 w-full bg-green-800 text-white py-1 rounded"
           onClick={() => onReserveClick(desk.deskId)}
         >
           Reserve
@@ -54,7 +54,7 @@ export default function DeskCard({
               if (!desk.reservationId) return;
               onCancelAllClick(desk.reservationId);
             }}
-            className="mt-3 w-full bg-red-600 text-white text-xs py-1 rounded"
+            className="mt-3 w-full bg-red-800 text-white  py-1 rounded"
           >
             Cancel reservation
           </button>
