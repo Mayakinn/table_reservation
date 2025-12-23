@@ -8,9 +8,9 @@ React + .NET Core website for Desk Reservations.
 * Cancelling reservations
 
 ### Prerequisites 
-* Node.js
-* .Net SDK 9
-
+* Node.js.
+* .Net SDK 9.
+* Create a .env file in the frontend directory and configure the backend API URL (see .env.example).
 ### How to run it
 Start the backend
 ```
