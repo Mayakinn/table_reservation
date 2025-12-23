@@ -10,7 +10,7 @@ export default function CreateReservationForm({ from, to, onConfirm }: Props) {
       <p>
         Reserve desk for:
         <br />
-        <strong>{from}</strong> → <strong>{to}</strong>
+        <strong>{from}</strong> -{">"} <strong>{to}</strong>
       </p>
 
       <button
